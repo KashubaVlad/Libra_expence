@@ -62,6 +62,36 @@
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="78.348214285714278"/>
         </scene>
+        <!--Item Cell Controller-->
+        <scene sceneID="P0u-Q3-xIi">
+            <objects>
+                <viewController storyboardIdentifier="ItemCellVC" id="RSu-Af-b5g" customClass="ItemCellController" customModule="Libra_расходы" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ohw-sC-Mmb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl7-mZ-Cyu">
+                                <rect key="frame" x="177.5" y="433" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hfl-21-wSk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sl7-mZ-Cyu" firstAttribute="centerY" secondItem="Ohw-sC-Mmb" secondAttribute="centerY" id="Gz0-ng-qiq"/>
+                            <constraint firstItem="Sl7-mZ-Cyu" firstAttribute="centerX" secondItem="Ohw-sC-Mmb" secondAttribute="centerX" id="PoY-rf-JLB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Sl7-mZ-Cyu" id="5eo-hY-CeN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vid-5i-4gX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="744.64285714285711"/>
+        </scene>
         <!--Add Expences-->
         <scene sceneID="Jin-Qs-vjJ">
             <objects>
@@ -191,6 +221,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="expenceAddPhotoButton" destination="4M0-la-M6E" id="hzC-N0-qrr"/>
                         <outlet property="expenceDateLabe" destination="iHH-Aj-Zaq" id="ejS-ON-HJn"/>
                         <outlet property="expenceDateTextField" destination="pqM-PN-8Zf" id="NYx-3Q-gVL"/>
                         <outlet property="expenceNameLabel" destination="tax-jz-hcd" id="Vel-zg-kuq"/>
@@ -199,6 +230,7 @@
                         <outlet property="expenceNotesTextField" destination="vXM-MB-dob" id="tCd-7r-VJz"/>
                         <outlet property="expencePriceLabel" destination="THD-Nj-WGT" id="s8i-Zy-5q0"/>
                         <outlet property="expencePriceTextField" destination="9Hq-2R-taf" id="Yrh-No-hNd"/>
+                        <outlet property="expenceSaveButton" destination="Rre-8u-kPO" id="AdD-bm-dZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfi-se-gLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

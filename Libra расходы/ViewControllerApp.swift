@@ -51,6 +51,15 @@ class ViewControllerApp: UIViewController, AddItemDelegate {
         self.present(vc!, animated: true, completion: nil)
         vc?.delegate = self
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "ItemCellVC"))! as? ItemCellController
+        self.present(vc!, animated: true, completion: nil)
+        
+    }
+
+
+
 }
 
 extension ViewControllerApp: UITableViewDataSource, UITableViewDelegate {
@@ -82,9 +91,7 @@ extension ViewControllerApp: UITableViewDataSource, UITableViewDelegate {
         ///        cell.ExpenceImage.image = item.image
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Raw \(indexPath.row)")
-    }
+    
 }
 
 /*    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

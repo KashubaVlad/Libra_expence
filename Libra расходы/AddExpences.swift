@@ -17,23 +17,35 @@ class AddExpences: UIViewController {
     @IBOutlet weak var expencePriceTextField: UITextField!
     
     @IBOutlet weak var expenceDateLabe: UILabel!
-    
     @IBOutlet weak var expenceDateTextField: UITextField!
     let datePicker = UIDatePicker()
     
     @IBOutlet weak var expenceNotesLabel: UILabel!
     @IBOutlet weak var expenceNotesTextField: UITextField!
     
+    @IBOutlet weak var expenceAddPhotoButton: UIButton!
+    @IBOutlet weak var expenceSaveButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configurationInterface()
         createDatePicker()
-        datePicker.preferredDatePickerStyle = .wheels
-        datePicker.datePickerMode = .date
+        
     }
     
+    private func configurationInterface() {
+        expenceNotesTextField.borderStyle = .roundedRect
+        
+        expenceAddPhotoButton.layer.cornerRadius = expenceAddPhotoButton.frame.size.height/2
+        expenceSaveButton.layer.cornerRadius = expenceAddPhotoButton.frame.size.height/2
+    }
+    
+    
     func createDatePicker() {
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
@@ -45,7 +57,6 @@ class AddExpences: UIViewController {
         toolbar.setItems([flexSpace,doneButton], animated: true)
     }
     
-    
     @objc func donePressed() {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -55,6 +66,8 @@ class AddExpences: UIViewController {
         expenceDateTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
+    
+    
     
     @IBAction func expenceAddPhotoButtonClicked(_ sender: Any) {
         let imgPick = UIImagePickerController()
