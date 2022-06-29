@@ -10,23 +10,37 @@ import UIKit
 
 
 class ItemCellController: UIViewController {
-    
-    
-    
+    var name = "name"
     @IBOutlet weak var nameLabel: UILabel!
     
     
+    var price = 0
+    @IBOutlet weak var priceLabel: UILabel!
     
-    private func config() {
-        let name = nameLabel
-        name!.text = "hello"
+    var notes = " "
+    @IBOutlet weak var notesLabel: UILabel!
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        connectOutlet()
         
     }
     
     
+    
+    
+    func connectOutlet() {
+        nameLabel.text = name
+        priceLabel.text = String(price)
+        notesLabel.text = notes
+    }
+    
 }
-    
-    
-    
-    
+
+
+
+
 

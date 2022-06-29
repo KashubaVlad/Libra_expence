@@ -15,6 +15,7 @@ struct Item {
     ///    var date: Date
     var notes: String
     
+    
     init(name: String, price: Int, image: UIImage, notes: String) {
         self.name = name
         self.price = price
@@ -26,4 +27,4 @@ struct Item {
 }
 
 
-var totalMinus = 0
+var totalBalance = 0.00
